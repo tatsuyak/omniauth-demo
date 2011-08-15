@@ -2,6 +2,7 @@ OmniauthDemo::Application.routes.draw do
 
   get "home/index"
 
+
   root :to => "home#index"
   match '/auth/:provider/callback' => 'sessions#create'
   match '/signin' => 'sessions#new', :as => :signin
